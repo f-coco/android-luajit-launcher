@@ -80,6 +80,7 @@ object DeviceInfo {
         MOAAN_MIX7,
         MOAAN_W7,
         MOAAN_FLOW_MINI,
+        MOAAN_INKPALM5,
         MOOINKPLUS2C,
         NABUK,
         NOOK,
@@ -380,6 +381,10 @@ object DeviceInfo {
             // Moaan Flow Mini (迷你阅) — same sun8iw15p1 platform as W7
             BRAND == "allwinner" && MODEL == "flow.mini" && DEVICE == "virgo-perf1" && HARDWARE == "sun8iw15p1"
             -> Id.MOAAN_FLOW_MINI
+
+            // Moaan InkPalm 5 (EPD105) — same sun8iw15p1 platform / refresh path as Flow Mini
+            BRAND == "allwinner" && MODEL == "epd105" && DEVICE == "virgo-perf1" && HARDWARE == "sun8iw15p1"
+            -> Id.MOAAN_INKPALM5
 
             // Mooink Plus 2c
             BRAND == "allwinner" && MODEL == "mooink plus 2c"
@@ -769,6 +774,7 @@ object DeviceInfo {
             Id.LINFINY_ENOTE,
             Id.MOAAN_W7,
             Id.MOAAN_FLOW_MINI,
+            Id.MOAAN_INKPALM5,
             Id.ONYX_MAX,
             Id.ONYX_MAX2_PRO,
             Id.ONYX_NOTE,
