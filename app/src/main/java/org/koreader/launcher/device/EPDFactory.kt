@@ -17,6 +17,7 @@ import org.koreader.launcher.device.epd.NookEmperorEPDController
 import org.koreader.launcher.device.epd.RK3566EPDController
 import org.koreader.launcher.device.epd.RK357xEPDController
 import org.koreader.launcher.device.epd.SunxiEPDController
+import org.koreader.launcher.device.epd.IReaderEPDController
 
 import java.util.*
 
@@ -217,6 +218,13 @@ object EPDFactory {
                 -> {
                     logController("Allwinner/Sunxi")
                     SunxiEPDController()
+                }
+
+                DeviceInfo.Id.IREADER,
+                DeviceInfo.Id.IREADER_NEO2,
+                -> {
+                    logController("iReader (EPDCDevice gc16)")
+                    IReaderEPDController()
                 }
 
                 else -> {
