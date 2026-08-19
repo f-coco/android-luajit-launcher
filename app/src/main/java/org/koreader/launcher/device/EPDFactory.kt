@@ -220,8 +220,8 @@ object EPDFactory {
                     SunxiEPDController()
                 }
 
-                DeviceInfo.Id.IREADER,
-                DeviceInfo.Id.IREADER_NEO2,
+                DeviceInfo.Id.IREADER_BROKEN_SCREEN,
+                DeviceInfo.Id.IREADER_TOUCH_SCREEN,
                 -> {
                     logController("iReader (EPDCDevice gc16)")
                     IReaderEPDController()
